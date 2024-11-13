@@ -25,6 +25,9 @@ const page = async () => {
       userid: user.id,
     },
   });
+  if (!userData) {
+    throw new Error("User not found");
+  }
 
   const plan = userData?.plan;
   const archiveM = userData?.archieveM;
