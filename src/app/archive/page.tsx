@@ -8,6 +8,10 @@ import lock from "@/imgs/icons8-lock-150.png";
 import ArchiveMapper from "@/components/ArchiveMapper";
 import LoadingOverlay from "@/components/LoadingOverlay";
 
+interface Advice {
+  id: number;
+  advice: string;
+}
 const page = async () => {
   const { isAuthenticated, getUser } = getKindeServerSession();
   const user = await getUser();
@@ -26,10 +30,10 @@ const page = async () => {
   const archiveM = userData?.archieveM;
   const archiveP = userData?.archieveP;
 
-  const advicesM = await prisma.mental.findMany();
-  const advicesP = await prisma.physical.findMany();
+  const advicesM: Advice[] = await prisma.mental.findMany();
+  const advicesP: Advice[] = await prisma.physical.findMany();
 
-  const filteredMentalAdvices = advicesM.filter((obj) =>
+  const filteredMentalAdvices = advicesM.filter((obj: Advice) =>
     archiveM?.includes(obj.id)
   );
   const sortedObjectsM = filteredMentalAdvices.sort(
