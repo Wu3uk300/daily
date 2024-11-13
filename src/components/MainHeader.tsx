@@ -34,7 +34,7 @@ const MainHeader: FC<MainHeaderProps> = ({ quote }) => {
       }
     }, 10500);
     return () => clearTimeout(animationTimer);
-  }, [router]);
+  }, [router, isAuthenticated]);
   return (
     <div>
       <CSSTransition
