@@ -51,7 +51,7 @@ const ArchiveMapper: FC<ArchiveMapperInterface> = ({ advicesM, advicesP }) => {
               </>
             ) : (
               <>
-                {advicesM.map((obj) => (
+                {advicesM.map((obj: MyObject) => (
                   <div key={obj.id} className={styles.archiveBlock}>
                     <div>{obj.advice}</div>
                   </div>
@@ -69,7 +69,7 @@ const ArchiveMapper: FC<ArchiveMapperInterface> = ({ advicesM, advicesP }) => {
               </>
             ) : (
               <>
-                {advicesP.map((obj) => (
+                {advicesP.map((obj: MyObject) => (
                   <div key={obj.id} className={styles.archiveBlock}>
                     <div>{obj.advice}</div>
                   </div>
