@@ -1,3 +1,4 @@
+"use client";
 import { PrismaClient } from "@prisma/client";
 
 // Создаем объект для хранения глобального экземпляра PrismaClient.
