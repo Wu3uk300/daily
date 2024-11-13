@@ -1,0 +1,204 @@
+.taskBox {
+  background-color: #222222;
+  width: 800px;
+  margin: auto;
+  margin-top: 50px;
+  padding: 50px 100px;
+}
+
+.progressBar {
+  text-align: center;
+}
+
+.progressText {
+  margin-bottom: 0.25rem; /* mb-1 */
+  font-size: 1.125rem; /* text-lg */
+  font-weight: 500; /* font-medium */
+  color: white;
+}
+
+.progressBarBackground {
+  max-width: 60%;
+  height: 1.5rem; /* h-6 */
+  background-color: #e5e7eb; /* bg-gray-200 */
+  border-radius: 9999px; /* rounded-full */
+  margin: auto;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.progressBarInner {
+  height: 1.5rem; /* h-6 */
+  background-color: #007bff; /* bg-blue-600 (or #007bff for dark) */
+  border-radius: 9999px; /* rounded-full */
+  transition: width 0.5s; /* transition-all duration-500 */
+}
+
+.customSelectContainer {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+}
+
+.radioInput {
+  display: none;
+}
+
+.radioLabel {
+  text-align: center;
+  width: 100px;
+  padding: 10px 20px;
+  background-color: #dddddd;
+  border: 2px solid #333333;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  color: #333333;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.radioInput:checked + .radioLabel {
+  background-color: #007bff; /* Цвет заднего фона выбора */
+  color: #ffffff; /* Цвет текста при выборе */
+}
+.btnContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+}
+.getBtn {
+  font-size: 16px;
+  background-color: #007bff;
+  color: #dddddd;
+  width: fit-content;
+  padding: 15px 40px;
+  border-radius: 15px;
+  transition: 0.3s all;
+  text-align: center;
+  font-weight: normal;
+}
+.getBtn:hover {
+  cursor: pointer;
+  background-color: #1787ff;
+}
+
+/* Начальное состояние при входе */
+.adviceEnter {
+  opacity: 0;
+  transform: translateY(50px); /* Элемент находится ниже */
+  background-color: rgba(0, 0, 0, 0); /* Прозрачный фон */
+}
+
+/* Активное состояние во время входа */
+.adviceEnterActive {
+  opacity: 1;
+  transform: translateY(0); /* Плавно возвращаем на место */
+  transition: opacity 1000ms ease, transform 1000ms ease;
+}
+
+/* Начальное состояние при выходе */
+.adviceExit {
+  opacity: 1; /* Элемент видимый */
+  transform: scale(1); /* Элемент в нормальном размере */
+}
+
+/* Активное состояние во время выхода */
+.adviceExitActive {
+  opacity: 0; /* Элемент становится прозрачным */
+  transform: scale(0.5); /* Элемент уменьшается вдвое */
+  transition: opacity 1000ms ease, transform 1000ms ease; /* Плавный переход */
+}
+
+.getBtnDissapear {
+  display: none;
+}
+.taskboxHeader {
+  text-align: center;
+  font-size: 34px;
+}
+.taskboxTextBox {
+  margin-top: 20px;
+  border: 3px solid #007bff;
+  border-radius: 15px;
+  padding: 20px 50px 20px;
+  background-color: #333333;
+}
+.taskBoxText {
+  text-align: center;
+}
+
+.timerEnter {
+  opacity: 0;
+  transform: scaleY(0);
+}
+
+.timerEnterActive {
+  opacity: 1;
+  transform: scaleY(1);
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+.timerExit {
+  opacity: 1;
+  transform: scaleY(1);
+}
+
+.timerExitActive {
+  opacity: 0;
+  transform: scaleY(0);
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+.timerContainer {
+  font-size: 1.2em;
+  text-align: center;
+  padding: 10px;
+  background-color: #333333;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 200px;
+  margin: auto;
+  margin-top: 30px;
+}
+
+@media (prefers-color-scheme: dark) {
+  .progressText {
+    color: white; /* dark:text-white */
+  }
+
+  .progressBarBackground {
+    background-color: #374151; /* dark:bg-gray-700 */
+  }
+}
+@media (max-width: 1250px) {
+  .taskBox {
+    background-color: #222222;
+    width: 700px;
+    margin: auto;
+    margin-top: 50px;
+    padding: 30px 70px;
+  }
+}
+
+@media (max-width: 768px) {
+  .taskBox {
+    background-color: #222222;
+    width: 470px;
+    margin: auto;
+    margin-top: 50px;
+    padding: 20px 50px;
+  }
+}
+
+@media (max-width: 480px) {
+  .taskBox {
+    background-color: #222222;
+    width: 350px;
+    margin: auto;
+    margin-top: 50px;
+    padding: 15px 30px;
+  }
+}

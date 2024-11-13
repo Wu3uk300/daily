@@ -1,0 +1,27 @@
+.wholeContainer {
+  background-color: #333333;
+  color: #dddddd;
+  min-height: 100vh;
+}
+.container {
+  width: 1000px;
+  margin: auto;
+  padding-bottom: 50px;
+}
+@media (max-width: 1250px) {
+  .container {
+    width: 700px;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    width: 470px;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    width: 350px;
+  }
+}

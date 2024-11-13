@@ -1,0 +1,39 @@
+.container {
+  width: 800px;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding-bottom: 150px;
+}
+.changeItHeader {
+  font-size: 45px;
+  text-align: center;
+  line-height: 1.1;
+  margin-bottom: 50px;
+}
+.changeIt {
+  max-width: 50%;
+}
+
+@media (max-width: 1000px) {
+  .container {
+    width: 600px;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    width: 470px;
+  }
+}
+
+@media (max-width: 480px) {
+  .changeItHeader {
+    font-size: 30px;
+  }
+  .container {
+    width: 360px;
+  }
+}

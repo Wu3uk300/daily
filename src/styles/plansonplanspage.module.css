@@ -1,0 +1,168 @@
+.btnItself {
+  font-size: 16px;
+  background-color: #007bff;
+  color: #dddddd;
+  width: 100%;
+  padding: 15px 40px;
+  border-radius: 15px;
+  transition: 0.3s all;
+  text-align: center;
+  font-weight: normal;
+}
+.btnItself:hover {
+  cursor: pointer;
+  background-color: #1787ff;
+}
+
+.disabledBtn {
+  font-size: 16px;
+  background-color: #9b9b9b;
+  color: #dddddd;
+  width: 100%;
+  padding: 15px 40px;
+  border-radius: 15px;
+  text-align: center;
+  font-weight: normal;
+}
+.disabledBtn:hover {
+  cursor: default;
+}
+.squaresContainer {
+  margin-top: 50px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.plansText {
+  text-align: center;
+}
+.miniHeader {
+  color: #007bff;
+  margin-bottom: 20px;
+}
+.header {
+  font-size: 45px;
+  line-height: 1.1;
+  width: 800px;
+  margin: auto;
+  margin-bottom: 70px;
+}
+.planSquare {
+  background-color: #222222;
+  width: 440px;
+  height: 515px;
+  border-radius: 0.5rem;
+  padding: 30px 30px 10px 30px;
+  border: 3px solid #222222;
+  opacity: 0.7;
+}
+.premiumPlanSquare {
+  background-color: #222222;
+  width: 440px;
+  height: 515px;
+  border-radius: 0.5rem;
+  padding: 30px 30px 10px 30px;
+  border: 3px solid #007bff;
+}
+.planName {
+  font-size: 25px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+.planPrice {
+  font-size: 35px;
+  margin-bottom: 20px;
+}
+.check {
+  margin-right: 10px;
+}
+.isInPlan {
+  margin-bottom: 10px;
+}
+.notInPlan {
+  margin-bottom: 10px;
+  opacity: 0.3;
+}
+.btn {
+  margin-top: 40px;
+}
+.planSubText {
+  text-align: center;
+  margin-top: 10px;
+  font-size: 14px;
+}
+.deletedPrice {
+  font-size: 16px;
+}
+
+@media (max-width: 1000px) {
+  .planSquare {
+    background-color: #222222;
+    width: 350px;
+    height: 575px;
+    border-radius: 0.5rem;
+    padding: 30px 30px 10px 30px;
+    border: 3px solid #222222;
+    opacity: 0.7;
+    margin-bottom: 50px;
+  }
+  .premiumPlanSquare {
+    background-color: #222222;
+    width: 350px;
+    height: 575px;
+    border-radius: 0.5rem;
+    padding: 30px 30px 10px 30px;
+    border: 3px solid #007bff;
+  }
+}
+
+@media (max-width: 768px) {
+  .planSquare {
+    background-color: #222222;
+    width: 440px;
+    height: 515px;
+    border-radius: 0.5rem;
+    padding: 30px 30px 10px 30px;
+    border: 3px solid #222222;
+    opacity: 0.7;
+    margin-bottom: 50px;
+  }
+  .premiumPlanSquare {
+    background-color: #222222;
+    width: 440px;
+    height: 515px;
+    border-radius: 0.5rem;
+    padding: 30px 30px 10px 30px;
+    border: 3px solid #007bff;
+    margin-bottom: 50px;
+  }
+  .squaresContainer {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .planSquare {
+    background-color: #222222;
+    width: 350px;
+    height: 575px;
+    border-radius: 0.5rem;
+    padding: 30px 30px 10px 30px;
+    border: 3px solid #222222;
+    opacity: 0.7;
+    margin-bottom: 50px;
+  }
+  .premiumPlanSquare {
+    background-color: #222222;
+    width: 350px;
+    height: 575px;
+    border-radius: 0.5rem;
+    padding: 30px 30px 10px 30px;
+    border: 3px solid #007bff;
+    margin-bottom: 50px;
+  }
+}

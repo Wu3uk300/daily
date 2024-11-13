@@ -1,0 +1,143 @@
+.howItWorks {
+  margin: auto;
+  margin-top: 100px;
+}
+.howItWorksHeader {
+  font-size: 40px;
+  text-align: center;
+}
+.howItWorksSub {
+  font-size: 16px;
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 50px;
+}
+.howItWorksSquares {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+}
+.howSquare {
+  background-color: #222222;
+  width: 300px;
+  height: 250px;
+  border-radius: 10px;
+  padding: 30px 35px 10px 35px;
+}
+.howSquareHeader {
+  text-align: center;
+  color: #007bff;
+  font-size: 20px;
+  font-weight: bold;
+}
+.customSelectContainer {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+}
+
+.radioInput {
+  display: none;
+}
+
+.radioLabel {
+  text-align: center;
+  width: 100px;
+  padding: 10px 20px;
+  background-color: #dddddd;
+  border: 2px solid #333333;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  color: #333333;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.radioInput:checked + .radioLabel {
+  background-color: #007bff; /* Цвет заднего фона выбора */
+  color: #ffffff; /* Цвет текста при выборе */
+}
+
+.howSqaureSubHeader {
+  text-align: center;
+  font-size: 15px;
+  line-height: 1.2;
+  margin-bottom: 30px;
+  margin-top: 30px;
+}
+.progressBar {
+  margin-top: -10px;
+}
+.howSqaureSubHeaderNotVisible {
+  display: none;
+}
+.adviceItselfNotVisible {
+  display: none;
+}
+.adviceBox {
+  background-color: #333333;
+  width: 200px;
+  height: 150px;
+  margin: auto;
+  margin-top: 15px;
+  padding: 10px 15px 10px 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border: 3px solid #007bff;
+  border-radius: 15px;
+}
+.adviceEnter {
+  opacity: 0;
+  transform: translateY(-20px);
+}
+
+.adviceEnterActive {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 300ms, transform 300ms;
+}
+
+.adviceExit {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.adviceExitActive {
+  opacity: 0;
+  transform: translateY(-20px);
+  transition: opacity 300ms, transform 300ms;
+}
+.arrow {
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  margin-right: 5px;
+  margin-left: 5px;
+}
+
+@media (max-width: 1250px) {
+  .howItWorksSquares {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+@media (max-width: 768px) {
+}
+
+@media (max-width: 480px) {
+  .howItWorksHeader {
+    font-size: 30px;
+    text-align: center;
+  }
+  .howItWorksSub {
+    font-size: 14px;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 50px;
+  }
+}

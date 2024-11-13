@@ -1,0 +1,160 @@
+.container {
+  max-width: 100%;
+  margin-top: 100px;
+  background-color: #1e1e1e;
+  padding-top: 50px;
+  color: #dddddd;
+  height: fit-content;
+  padding-bottom: 50px;
+}
+.contentContainer {
+  margin: auto;
+}
+.squaresContainer {
+  display: flex;
+  justify-content: center;
+}
+
+.plansText {
+  text-align: center;
+}
+.miniHeader {
+  color: #007bff;
+  margin-bottom: 20px;
+}
+.header {
+  font-size: 45px;
+  line-height: 1.1;
+  width: 800px;
+  margin: auto;
+  margin-bottom: 70px;
+}
+.planSquare {
+  background-color: #333333;
+  width: 440px;
+  height: 515px;
+  border-radius: 0.5rem;
+  padding: 30px 30px 10px 30px;
+  border: 3px solid #333333;
+  margin-right: 50px;
+}
+.premiumPlanSquare {
+  background-color: #333333;
+  width: 440px;
+  height: 515px;
+  border-radius: 0.5rem;
+  padding: 30px 30px 10px 30px;
+  border: 3px solid #007bff;
+}
+.planName {
+  font-size: 25px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+.planPrice {
+  font-size: 35px;
+  margin-bottom: 20px;
+}
+.check {
+  margin-right: 10px;
+}
+.isInPlan {
+  margin-bottom: 10px;
+}
+.notInPlan {
+  margin-bottom: 10px;
+  opacity: 0.3;
+}
+.btn {
+  margin-top: 40px;
+}
+.planSubText {
+  text-align: center;
+  margin-top: 10px;
+  font-size: 14px;
+}
+.deletedPrice {
+  font-size: 16px;
+}
+
+@media (max-width: 1000px) {
+  .header {
+    font-size: 38px;
+    line-height: 1.1;
+    width: fit-content;
+    margin: auto;
+    margin-bottom: 70px;
+  }
+  .planSquare {
+    background-color: #333333;
+    width: 350px;
+    height: 555px;
+    border-radius: 0.5rem;
+    padding: 30px 30px 10px 30px;
+    border: 3px solid #333333;
+    margin-right: 50px;
+  }
+  .premiumPlanSquare {
+    background-color: #333333;
+    width: 350px;
+    height: 555px;
+    border-radius: 0.5rem;
+    padding: 30px 30px 10px 30px;
+    border: 3px solid #007bff;
+  }
+}
+
+@media (max-width: 768px) {
+  .squaresContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .planSquare {
+    margin: auto;
+    background-color: #333333;
+    width: 440px;
+    height: 515px;
+    border-radius: 0.5rem;
+    padding: 30px 30px 10px 30px;
+    border: 3px solid #333333;
+    margin-bottom: 50px;
+  }
+  .premiumPlanSquare {
+    background-color: #333333;
+    width: 440px;
+    height: 515px;
+    border-radius: 0.5rem;
+    padding: 30px 30px 10px 30px;
+    border: 3px solid #007bff;
+  }
+}
+
+@media (max-width: 480px) {
+  .header {
+    font-size: 30px;
+    line-height: 1.1;
+    width: fit-content;
+    margin: auto;
+    margin-bottom: 70px;
+  }
+  .planSquare {
+    margin: auto;
+    background-color: #333333;
+    width: 350px;
+    height: 555px;
+    border-radius: 0.5rem;
+    padding: 30px 30px 10px 30px;
+    border: 3px solid #333333;
+    margin-bottom: 50px;
+  }
+  .premiumPlanSquare {
+    background-color: #333333;
+    width: 350px;
+    height: 555px;
+    border-radius: 0.5rem;
+    padding: 30px 30px 10px 30px;
+    border: 3px solid #007bff;
+  }
+}

@@ -1,0 +1,114 @@
+.archiveBlocks {
+  display: flex;
+  flex-wrap: wrap;
+  margin: auto;
+  margin-top: 50px;
+}
+.archiveBlock {
+  padding: 15px 20px 15px 20px;
+  background-color: #222222;
+  border: 2px solid #007bff;
+  border-radius: 5px;
+  height: 300px;
+  width: 300px;
+  margin: auto;
+  margin-bottom: 30px;
+  overflow: auto;
+  scrollbar-width: thin; /* Тонкий скроллбар */
+  scrollbar-color: #007bff #222222; /* Цвет бегунка и фона */
+  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+  user-select: none;
+}
+
+/* Эффект наведения */
+.archiveBlock:hover {
+  transform: translateY(-5px); /* Лёгкое поднятие блока */
+  border-color: #0056b3; /* Более тёмный оттенок синего */
+  box-shadow: 0 4px 15px rgba(0, 123, 255, 0.5); /* Синеватая тень */
+}
+
+/* Активное состояние при клике */
+.archiveBlock:active {
+  transform: translateY(2px); /* Лёгкое вдавливание блока */
+  box-shadow: 0 2px 10px rgba(0, 123, 255, 0.3); /* Уменьшенная тень */
+}
+
+/* Фокус для клавиатуры */
+.archiveBlock:focus {
+  outline: none;
+  border-color: #00b3ff; /* Ярко-голубая рамка при фокусе */
+  box-shadow: 0 0 8px #00b3ff; /* Эффект свечения */
+}
+
+/* Стилизация скроллбара */
+.archiveBlock::-webkit-scrollbar {
+  width: 8px;
+}
+
+.archiveBlock::-webkit-scrollbar-track {
+  background: #222222;
+  border-radius: 5px;
+}
+
+.archiveBlock::-webkit-scrollbar-thumb {
+  background: #007bff;
+  border-radius: 5px;
+}
+
+.archiveBlock::-webkit-scrollbar-thumb:hover {
+  background: #0056b3; /* Тёмно-синий при наведении */
+}
+.customSelectContainer {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+}
+
+.radioInput {
+  display: none;
+}
+
+.radioLabel {
+  text-align: center;
+  width: 100px;
+  padding: 10px 20px;
+  background-color: #dddddd;
+  border: 2px solid #333333;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  color: #333333;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.radioInput:checked + .radioLabel {
+  background-color: #007bff; /* Цвет заднего фона выбора */
+  color: #ffffff; /* Цвет текста при выборе */
+}
+.dontHave {
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .archiveBlocks {
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  .archiveBlock {
+    font-size: 14px;
+    margin-right: 0px;
+  }
+}
+
+@media (max-width: 480px) {
+  .archiveBlock {
+    margin-right: 0px;
+  }
+}

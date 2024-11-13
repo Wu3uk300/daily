@@ -1,0 +1,69 @@
+@import url("https://fonts.googleapis.com/css2?family=Allura&family=Great+Vibes&family=Kaushan+Script&family=Satisfy&display=swap");
+
+.fadeEnter {
+  opacity: 0;
+}
+
+.fadeEnterActive {
+  opacity: 1;
+  transition: opacity 6s ease-in-out;
+}
+
+.fadeExit {
+  opacity: 1;
+}
+
+.fadeExitActive {
+  opacity: 0;
+  transition: opacity 4s ease-in-out;
+}
+
+.wholeQuote {
+  padding: 10px 15px; /* Отступы вокруг текста */
+  margin: 20px auto; /* Центрирование */
+  border-radius: 5px; /* Скругление углов */
+  width: 90%; /* Процентная ширина для адаптации */
+  max-width: 600px; /* Ограничение ширины для больших экранов */
+  text-align: center;
+  box-sizing: border-box; /* Учитываем отступы в ширине */
+}
+
+.quote {
+  font-family: "Kaushan Script", cursive;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 35px; /* Уменьшаем размер текста */
+  line-height: 1.6; /* Увеличиваем межстрочный интервал для читаемости */
+  word-wrap: break-word; /* Переносим длинные слова */
+}
+
+.author {
+  display: block; /* Переносит автора на новую строку */
+  text-align: right; /* Выравнивание текста автора вправо */
+  margin-top: 10px; /* Отступ сверху для автора */
+  font-size: 16px; /* Размер шрифта автора */
+}
+
+/* Медиазапросы для планшетов */
+@media (max-width: 768px) {
+  .quote {
+    font-size: 18px; /* Уменьшаем размер текста для планшетов */
+  }
+  .author {
+    font-size: 14px; /* Шрифт автора становится меньше */
+  }
+}
+
+/* Медиазапросы для телефонов */
+@media (max-width: 480px) {
+  .wholeQuote {
+    padding: 8px 10px; /* Уменьшаем отступы */
+  }
+  .quote {
+    font-size: 17px; /* Еще меньше для узких экранов */
+  }
+  .author {
+    font-size: 12px; /* Шрифт автора адаптируется */
+    margin-top: 30px;
+  }
+}

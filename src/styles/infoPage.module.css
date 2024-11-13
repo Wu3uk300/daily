@@ -1,0 +1,201 @@
+.content {
+  width: 1200px;
+  margin: auto;
+  scroll-behavior: smooth;
+}
+
+.bigContainer {
+  background-color: #333333;
+  color: #dddddd;
+  min-height: 100vh;
+}
+
+.mainInfo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 150px;
+  gap: 30px;
+}
+
+.header {
+  color: #007bff;
+  font-size: 45px;
+  line-height: 1.1;
+  font-weight: bolder;
+}
+
+.textLower {
+  color: #dddddd;
+}
+
+.subText {
+  margin-top: 30px;
+  font-size: 18px;
+  color: #dddddd;
+  margin-bottom: 30px;
+  font-weight: normal;
+  line-height: 1.5;
+}
+
+.alreadyBtn {
+  margin-top: 20px;
+  width: fit-content;
+}
+.btnsFormed {
+  display: flex;
+  flex-direction: column;
+}
+
+.mindAndPhysic {
+  margin-top: 130px;
+  display: flex;
+  justify-content: space-around;
+}
+.infoBlock {
+  display: flex;
+  flex-direction: column;
+}
+.infoImg {
+  margin-bottom: -100px;
+  z-index: 2;
+  width: 500px;
+  display: flex;
+  justify-content: center;
+}
+.infoBox {
+  background-color: #222222;
+  border-radius: 10px;
+  width: 500px;
+  height: 565px;
+  padding: 100px 40px 50px 40px;
+}
+.infoText {
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+.infoBtn {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.registerBtn {
+  width: fit-content;
+}
+
+/* Media Queries */
+@media (max-width: 1250px) {
+  .infoBox {
+    width: 370px;
+    height: 465px;
+    padding: 80px 30px 35px 30px;
+    font-size: 12px;
+  }
+  .infoImg {
+    margin-bottom: -100px;
+    z-index: 2;
+    width: 370px;
+    display: flex;
+    justify-content: center;
+  }
+  .mindAndPhysic {
+    justify-content: space-between;
+  }
+  .btnsFormed {
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 50px;
+  }
+  .alreadyBtn {
+    margin-top: 0px;
+    margin-left: 20px;
+  }
+  .content {
+    width: 768px;
+  }
+  .mainInfo {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 100px;
+  }
+
+  .header {
+    font-size: 38px;
+    text-align: center;
+  }
+
+  .subText {
+    font-size: 16px;
+    text-align: center;
+  }
+
+  .btnsFormed {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .alreadyBtn {
+    margin-top: 0px;
+    margin-left: 0px;
+  }
+  .infoBlock {
+    justify-content: center;
+    align-items: center;
+  }
+  .mindAndPhysic {
+    flex-direction: column;
+    justify-content: center;
+    align-self: center;
+    margin-top: 100px;
+  }
+  .content {
+    width: 480px;
+  }
+  .mainInfo {
+    margin-top: 100px;
+    gap: 20px;
+  }
+
+  .header {
+    font-size: 32px;
+  }
+
+  .subText {
+    font-size: 14px;
+  }
+
+  .btnsFormed {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .infoBox {
+    width: 350px;
+    height: 465px;
+    padding: 80px 30px 35px 30px;
+    font-size: 12px;
+  }
+  .infoImg {
+    margin-bottom: -100px;
+    z-index: 2;
+    width: 350px;
+    display: flex;
+    justify-content: center;
+  }
+  .content {
+    width: 375px;
+  }
+  .header {
+    font-size: 30px;
+  }
+
+  .subText {
+    font-size: 12px;
+    line-height: 1.4;
+  }
+}
