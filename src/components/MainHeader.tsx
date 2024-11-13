@@ -3,6 +3,7 @@ import { FC, useEffect, useState } from "react";
 import { CSSTransition } from "react-transition-group";
 import styles from "@/styles/mainHeader.module.css";
 import { useRouter } from "next/navigation";
+import { useKindeBrowserClient } from "@kinde-oss/kinde-auth-nextjs";
 
 interface QuoteInterface {
   id: number | null;
@@ -15,6 +16,7 @@ interface MainHeaderProps {
 }
 
 const MainHeader: FC<MainHeaderProps> = ({ quote }) => {
+  const { isAuthenticated } = useKindeBrowserClient();
   const router = useRouter();
   const [animation, setAnimation] = useState(false);
   useEffect(() => {
@@ -23,7 +25,13 @@ const MainHeader: FC<MainHeaderProps> = ({ quote }) => {
       setAnimation(false);
     }, 6000);
     setTimeout(() => {
-      router.push("/info");
+      {
+        if (isAuthenticated) {
+          router.push("/task");
+        } else {
+          router.push("/info");
+        }
+      }
     }, 10500);
     return () => clearTimeout(animationTimer);
   }, [router]);

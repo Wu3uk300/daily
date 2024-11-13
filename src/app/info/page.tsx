@@ -13,17 +13,8 @@ import {
   RegisterLink,
 } from "@kinde-oss/kinde-auth-nextjs/components";
 import VIdeo from "@/components/VIdeo";
-import { getKindeServerSession } from "@kinde-oss/kinde-auth-nextjs/server";
-import { redirect } from "next/navigation";
 
-const Info = async () => {
-  const { isAuthenticated } = getKindeServerSession();
-
-  const isLoggedIn = await isAuthenticated();
-
-  if (isLoggedIn) {
-    redirect("/task");
-  }
+const Info = () => {
   return (
     <div className={styles.bigContainer}>
       <div className={styles.container}>
