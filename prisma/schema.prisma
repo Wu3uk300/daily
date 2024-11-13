@@ -21,14 +21,15 @@ model Quotes {
 }
 
 model User {
-   Int @id @default(autoincrement())
-  userid String @unique
-  plan Boolean
+  id        Int      @id @default(autoincrement()) // Название поля добавлено
+  userid    String   @unique
+  plan      Boolean
   progressM Int
   progressP Int
   archieveM Int[]
   archieveP Int[]
 }
+
 
 model Mental{
   id Int @id @default(autoincrement())
