@@ -2,8 +2,8 @@
 import { FC, useEffect, useState } from "react";
 import { CSSTransition } from "react-transition-group";
 import styles from "@/styles/mainHeader.module.css";
-import { useRouter } from "next/navigation";
-import { useKindeBrowserClient } from "@kinde-oss/kinde-auth-nextjs";
+import { redirect, useRouter } from "next/navigation";
+import { useKindeAuth } from "@kinde-oss/kinde-auth-nextjs";
 
 interface QuoteInterface {
   id: number | null;
@@ -16,7 +16,8 @@ interface MainHeaderProps {
 }
 
 const MainHeader: FC<MainHeaderProps> = ({ quote }) => {
-  const { isAuthenticated } = useKindeBrowserClient();
+  const { isAuthenticated } = useKindeAuth();
+
   const router = useRouter();
   const [animation, setAnimation] = useState(false);
   useEffect(() => {
@@ -27,14 +28,14 @@ const MainHeader: FC<MainHeaderProps> = ({ quote }) => {
     setTimeout(() => {
       {
         if (isAuthenticated) {
-          router.push("/task");
+          redirect("/task");
         } else {
-          router.push("/info");
+          redirect("/info");
         }
       }
     }, 10500);
     return () => clearTimeout(animationTimer);
-  }, [router, isAuthenticated]);
+  }, [router]);
   return (
     <div>
       <CSSTransition
