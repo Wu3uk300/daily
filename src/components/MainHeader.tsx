@@ -28,9 +28,9 @@ const MainHeader: FC<MainHeaderProps> = ({ quote }) => {
     setTimeout(() => {
       {
         if (isAuthenticated) {
-          redirect("/task");
+          router.push("/task");
         } else {
-          redirect("/info");
+          router.push("/task");
         }
       }
     }, 10500);
