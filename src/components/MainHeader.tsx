@@ -2,7 +2,7 @@
 import { FC, useEffect, useState } from "react";
 import { CSSTransition } from "react-transition-group";
 import styles from "@/styles/mainHeader.module.css";
-import { redirect, useRouter } from "next/navigation";
+import { useRouter } from "next/navigation";
 import { useKindeAuth } from "@kinde-oss/kinde-auth-nextjs";
 
 interface QuoteInterface {
