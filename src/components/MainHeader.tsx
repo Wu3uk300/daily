@@ -17,7 +17,6 @@ interface MainHeaderProps {
 
 const MainHeader: FC<MainHeaderProps> = ({ quote }) => {
   const { isAuthenticated } = useKindeAuth();
-  console.log(quote);
   const router = useRouter();
   const [animation, setAnimation] = useState(false);
   useEffect(() => {

@@ -4,17 +4,16 @@ import { PrismaClient } from "@prisma/client";
 
 export default async function Home() {
   const prisma = new PrismaClient();
-  function getRandomNumber(min: number = 1, max: number = 20): number {
-    return Math.floor(Math.random() * (max - min + 1)) + min;
-  }
 
-  const randomNumber = getRandomNumber();
+  const quotesCount = await prisma.quotes.count();
+  const randomId = Math.floor(Math.random() * quotesCount) + 1;
 
   const data = await prisma.quotes.findUnique({
     where: {
-      id: randomNumber,
+      id: randomId,
     },
   });
+
   return (
     <div className={styles.container}>
       <MainHeader quote={data} />
