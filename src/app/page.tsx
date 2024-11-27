@@ -1,7 +1,7 @@
 import styles from "@/styles/homePage.module.css";
 import MainHeader from "../components/MainHeader";
 import { PrismaClient } from "@prisma/client";
-
+export const revalidate = 0;
 export default async function Home() {
   const prisma = new PrismaClient();
 
