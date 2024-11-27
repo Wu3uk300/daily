@@ -47,7 +47,7 @@ const TaskBoxPremium: React.FC<TaskBoxPremium> = ({ progressM, progressP }) => {
     number | null
   >(null);
 
-  const countdownDuration = 10000;
+  const countdownDuration = 100000;
 
   useEffect(() => {
     const storedMentalAdvice = localStorage.getItem("mentalAdvice");
