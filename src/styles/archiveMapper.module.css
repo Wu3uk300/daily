@@ -13,6 +13,7 @@
   width: 300px;
   margin: auto;
   margin-bottom: 30px;
+  margin-right: 5px;
   overflow: auto;
   scrollbar-width: thin; /* Тонкий скроллбар */
   scrollbar-color: #007bff #222222; /* Цвет бегунка и фона */
