@@ -1,4 +1,3 @@
-export const revalidate = 0; // Отключаем кэширование в Next.js
 import styles from "@/styles/homePage.module.css";
 import MainHeader from "../components/MainHeader";
 import prisma from "@/prisma";
