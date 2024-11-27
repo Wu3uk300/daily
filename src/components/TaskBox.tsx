@@ -24,7 +24,7 @@ const TaskBox: React.FC<TaskBox> = ({ progressM, progressP }) => {
   const [physicalAdvice, setPhysicalAdvice] = useState<string | undefined>();
   const [checkedClick, setCheckedClick] = useState(0);
 
-  const countdownDuration = 100000;
+  const countdownDuration = 86400000;
 
   useEffect(() => {
     const storedAdvice = localStorage.getItem("advice");
